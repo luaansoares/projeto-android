@@ -57,6 +57,7 @@ header > p {
     font-size: 1.2em;
     max-width: 500px;
     margin: auto;
+    padding-bottom: 50px;
     padding-left: 10px;
     padding-right: 10px;
     text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.355);
@@ -68,7 +69,7 @@ nav{
 }
 
 nav > a {
-    color: white;
+    color: #83e1ad;
     padding: 10px;
     border-radius: 10px;        /* borda */
     text-decoration: none;
