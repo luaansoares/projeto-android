@@ -1,0 +1,196 @@
+@charset "UTF-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+@font-face{
+    font-family: 'Android';
+    src: url('../fontes/idroid.otf') format('opentype');
+    font-weight: normal;
+}
+
+
+:root{
+    --cor0: #c5ebd6;
+    --cor1: #83e1ad;
+    --cor2: #3ddc84;
+    --cor3: #2fa866;
+    --cor4: #1a5c37;
+    --cor5: #063d1e;
+
+    --fonte-padrao: Arial, Verdana, Helvetica, sans-serif;
+    --fonte-destaque: 'Bebas Neue', cursive;
+    --fonte-android: 'Android', cursive;
+}
+* {
+    margin: 0px;        /* tirar toda margin e padding */
+    padding: 0px;
+}
+
+body{
+    background: var(--cor0);
+    font-family: var(--fonte-padrao);
+}
+a.externo::after{
+    content: '\1F517';   /* adiciona o emoje apois o link, caso for externo */
+}
+
+
+header {
+    background-image: linear-gradient(to bottom, var(--cor3), var(--cor5));   /* criar um degradê */
+    min-height: 130px;
+    text-align: center;
+    padding-top: 40px;  /* ajuda a deixar a frase no meio */
+}
+
+header > h1 {
+    color: white;
+    font-family: var(--fonte-destaque);
+    font-size: 3em;   /* engrandesser */
+    font-weight: normal;
+    margin-bottom: 15px;   /* deu espaço entre H1 e p no centro */
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.481);
+}
+
+header > p {
+    font-family: var(--fonte-padrao);
+    color: white;
+    font-size: 1.2em;
+    max-width: 500px;
+    margin: auto;
+    padding-left: 10px;
+    padding-right: 10px;
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.355);
+}
+nav{
+    background-color: var(--cor5);
+    padding: 10px;
+    box-shadow: 0px 7px 9px rgba(0, 0, 0, 0.365);
+}
+
+nav > a {
+    color: white;
+    padding: 10px;
+    border-radius: 10px;        /* borda */
+    text-decoration: none;
+    transition-duration: 0.5s;  /* transição de meio segundo de uma opção para outra enquanto passar o mouse */
+}
+
+nav > a:hover {
+    background-color: var(--cor3);   /* quando passar o mouse, o fundo fica de uma cor */
+    color: var(--cor5);             /* quando passar o mouse a letra fica de uma cor */
+}
+main{
+    min-width: 300px;
+    max-width: 900px;
+    padding: 20px;
+    margin: auto;
+    margin-bottom: 30px; /* separar do footer */
+    background-color: white;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.679);
+    border-bottom-left-radius: 10px;  /* somente o lado arredonde */
+    border-bottom-right-radius: 10px;  /* somente o lado arredonde */
+}
+
+main h1{
+    color: var(--cor5);
+    font-family: var(--fonte-android);
+    font-weight: normal;
+    font-size: 1.8em;
+}
+main h2{
+    font-family: var(--fonte-android);
+    color: var(--cor4);
+    font-size: 1.3em;   /* tamanho da fonte */
+    font-weight: normal;
+    background-image: linear-gradient(to right, var(--cor1), transparent)  /* do fundo ir de tal cor até transparente */
+}
+main p{
+    margin: 15px 0px;
+    text-align: justify;
+    font-size: 1em;
+    text-indent: 30px;  /* recuo do paragrafo */
+    line-height: 2em;       /* espaço entre linhas */
+}
+
+main strong {
+    color: var(--cor4);
+    font-weight: bold;  /* define a espessura (ou peso) da fonte */
+}
+
+main a {
+    color: var(--cor5);
+    text-decoration: none;
+    font-weight: bold;
+    background-color: var(--cor1);
+    padding: 2px 6px;
+    border-radius: 5px;
+}
+main a:hover {
+    text-decoration: underline;
+    background-color: var(--cor3);
+}
+main img {
+    width: 100%;
+}
+
+main img.pequena{
+    max-width: 250px;  /* define a largura maxima que pode ter */
+    display: block;
+    margin: auto;
+}
+
+div.youtube{
+    background-color: var(--cor5);
+    margin: 0px -20px 30px -20px;
+    padding: 20px;
+    padding-bottom: 56%;
+    position: relative;         /* permite mover o elemento da sua posição original */
+}
+
+div.youtube > iframe{
+    position: absolute;  /* para posicionar um elemento em qualquer lugar da página*/
+    top: 5%;                /*topo do elemento*/
+    left: 5%;                  /*a esquerda do elemento*/
+    width: 90%;                 /*largura do elemento*/
+    height: 90%;                /*altura do elemento*/
+}
+aside {
+    background-color: #83e1ad;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.31);
+}
+
+aside > h3 {
+    background-color: var(--cor4);
+    color: white;
+    padding: 10px;
+    margin: -10px -10px 0px -10px;          /* encaixar no padding */
+    border-radius: 10px 10px 0px 0px;           /* fazer borda so em cima */
+}
+
+aside > ul {
+    list-style-type: '\2714\00A0\00A0';   /* '2714' codigo do emote check -- 00A0 é o espaço depois do emoji */
+    list-style-position: inside;    /* bolinha dentro do inside */
+    columns: 2;      /* dividir em duas colunas */;
+    
+}
+
+footer{
+    background-color: var(--cor5);
+    color: white;
+    text-align: center;
+    font-size: 0.8em;
+    padding: 5px;
+}
+
+footer a {
+    color: white;
+    font-weight: bolder;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+    color: var(--cor1);
+}
