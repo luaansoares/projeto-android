@@ -71,7 +71,7 @@ nav{
 nav > a {
     color: #83e1ad;
     padding: 10px;
-    border-radius: 10px;        /* borda */
+    border-radius: 10px;        /* borda    */
     text-decoration: none;
     transition-duration: 0.5s;  /* transição de meio segundo de uma opção para outra enquanto passar o mouse */
 }
